@@ -48,10 +48,10 @@ export default function DashboardPage() {
   const avgScore = scores.length > 0 ? scores.reduce((sum, s) => sum + s.percentage, 0) / scores.length : 0
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-green-100 to-blue-100 dark:from-gray-900 dark:to-gray-800">
       <nav className="bg-white dark:bg-gray-800 border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-bold">QuizMaster</h1>
+          <h1 className="text-2xl font-bold text-green-500">QuizMaster</h1>
           <div className="flex items-center gap-4">
             <span className="text-sm text-muted-foreground">Welcome, {user.username}</span>
             {isAdmin() && (
@@ -61,7 +61,7 @@ export default function DashboardPage() {
                 </Button>
               </Link>
             )}
-            <Button variant="outline" size="sm" onClick={handleLogout}>
+            <Button className="text-white bg-red-500 hover:bg-red-600" onClick={handleLogout}>
               Logout
             </Button>
           </div>
