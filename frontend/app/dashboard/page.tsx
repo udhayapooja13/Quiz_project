@@ -15,10 +15,10 @@ export default function DashboardPage() {
   const user = getUser()
 
   useEffect(() => {
-    // if (!user) {
-    //   router.push("/login")
-    //   return
-    // }
+    if (!user) {
+      router.push("/login")
+      return
+    }
 
     const loadScores = async () => {
       const token = getToken()

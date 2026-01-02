@@ -30,8 +30,10 @@ export interface Question {
   option_b: string
   option_c: string
   option_d: string
+  correct_answer: string
   difficulty: string
   category: string
+  created_at?: string
 }
 
 export interface Score {
